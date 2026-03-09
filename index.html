@@ -1,62 +1,164 @@
-<<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>College Student Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Polytechnic Atmakur</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#f2f2f2;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
+
+/* Navbar */
 
 header{
-background:#002147;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:#0a2540;
 color:white;
-padding:20px;
-text-align:center;
+position:sticky;
+top:0;
 }
 
-nav{
-background:#0056b3;
-padding:10px;
-text-align:center;
+.logo{
+font-size:22px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
-margin:15px;
 text-decoration:none;
-font-weight:bold;
+margin-left:20px;
+font-size:16px;
+transition:0.3s;
 }
 
 nav a:hover{
-color:yellow;
+color:#00d4ff;
 }
 
-.container{
-padding:30px;
+/* Hero Section */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+color:white;
+background:linear-gradient(120deg,#0072ff,#00c6ff);
+padding:20px;
+animation:fadeIn 2s;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:white;
+color:#0072ff;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#0a2540;
+color:white;
+}
+
+/* Features Section */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:50px 8%;
+background:#f5f7fb;
 }
 
 .card{
 background:white;
-margin:20px;
-padding:20px;
-display:inline-block;
-width:200px;
-border-radius:8px;
-box-shadow:0px 2px 5px gray;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+transition:0.4s;
 }
 
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#0072ff;
+}
+
+/* Notice Section */
+
+.notice{
+padding:50px 8%;
+background:white;
+text-align:center;
+}
+
+.notice h2{
+margin-bottom:20px;
+color:#0a2540;
+}
+
+/* Footer */
+
 footer{
-background:#002147;
+background:#0a2540;
 color:white;
 text-align:center;
-padding:10px;
-margin-top:40px;
+padding:20px;
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+nav{
+display:none;
+}
+
 }
 
 </style>
@@ -66,48 +168,70 @@ margin-top:40px;
 <body>
 
 <header>
-<h1>Government Polytechnic Atmakur(N)</h1>
-<p>Student Portal</p>
-</header>
+
+<div class="logo">GP Atmakur</div>
 
 <nav>
 <a href="index.html">Home</a>
+<a href="questionpapers.html">Question Papers</a>
 <a href="attendance.html">Attendance</a>
-<a href="papers.html">Question Papers</a>
-<a href="notes.html">Notes</a>
 <a href="hostel.html">Hostel</a>
-<a href="contact.html">Contact</a>
+<a href="#">Contact</a>
 </nav>
-<div class="container">
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Government Polytechnic Atmakur</h1>
+
+<p>Student Portal for Notes, Question Papers, Attendance and Hostel Information</p>
+
+<button onclick="location.href='questionpapers.html'">Explore Resources</button>
+
+</div>
+
+</section>
+
+<section class="features">
 
 <div class="card">
- <nav>
-<h3><a href="attendance.html">Attendance</a></h3
- </nav>
-<p>Check your attendance</p>
+<h3>📚 Question Papers</h3>
+<p>Access previous exam papers for all departments.</p>
 </div>
 
 <div class="card">
-<h3>Question Papers</h3>
-<p>Download previous papers</p>
+<h3>📊 Attendance</h3>
+<p>Students can easily check their attendance percentage.</p>
 </div>
 
 <div class="card">
-<h3>Hostel</h3>
-<p>Rules and mess menu</p>
+<h3>🏨 Hostel Info</h3>
+<p>View hostel rules, mess timings and facilities.</p>
 </div>
 
 <div class="card">
-<h3>Notices</h3>
-<p>Latest announcements</p>
+<h3>📢 Notices</h3>
+<p>Latest college announcements and exam updates.</p>
 </div>
 
-</div>
+</section>
+
+<section class="notice">
+
+<h2>Latest Announcements</h2>
+
+<p>Welcome to the official student portal of Government Polytechnic Atmakur.</p>
+
+</section>
 
 <footer>
-<p>© 2026 Government Polytechnic Atmakur(N)</p>
+
+<p>© 2026 Government Polytechnic Atmakur</p>
+
 </footer>
 
 </body>
-
 </html>
