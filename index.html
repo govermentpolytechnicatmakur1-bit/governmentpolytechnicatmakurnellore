@@ -13,145 +13,131 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:Arial;
 }
 
 body{
 background:#f4f7fb;
 }
 
-/* Navbar */
+/* TOP BAR */
+
+.topbar{
+background:#002147;
+color:white;
+padding:8px;
+text-align:center;
+font-size:14px;
+}
+
+/* NAVBAR */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 8%;
-background:#0a2540;
-color:white;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.logo-area{
+.logo{
 display:flex;
 align-items:center;
 gap:10px;
 }
 
-.logo-area img{
+.logo img{
 height:55px;
 }
 
-.logo-area h2{
-font-size:20px;
-}
-
 nav a{
-color:white;
-text-decoration:none;
 margin-left:20px;
-font-weight:500;
-transition:0.3s;
+text-decoration:none;
+color:#002147;
+font-weight:bold;
 }
 
 nav a:hover{
-color:#00d4ff;
+color:#007bff;
 }
 
-/* Hero Section */
+/* HERO SLIDER */
 
 .hero{
-height:80vh;
+height:70vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 color:white;
-background:linear-gradient(135deg,#0072ff,#00c6ff);
-padding:20px;
+text-align:center;
 }
 
 .hero h1{
-font-size:45px;
-margin-bottom:15px;
-animation:fadeDown 1s ease;
+font-size:48px;
 }
 
 .hero p{
+margin-top:10px;
 font-size:18px;
 }
 
-/* Portal Section */
+/* FEATURES */
 
-.portal{
-padding:60px 8%;
+.features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+gap:25px;
+padding:50px 8%;
 }
-
-/* Cards */
 
 .card{
 background:white;
-padding:35px;
-border-radius:12px;
+padding:30px;
 text-align:center;
-box-shadow:0 6px 20px rgba(0,0,0,0.1);
-cursor:pointer;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 transition:0.3s;
+cursor:pointer;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .card h3{
+color:#002147;
 margin-top:10px;
-color:#0072ff;
 }
 
-.card p{
-font-size:14px;
-color:#555;
+/* NOTICE SECTION */
+
+.notice{
+background:white;
+padding:50px 8%;
 }
 
-/* Footer */
+.notice h2{
+margin-bottom:20px;
+color:#002147;
+}
+
+.notice ul li{
+margin-bottom:10px;
+}
+
+/* FOOTER */
 
 footer{
-background:#0a2540;
+background:#002147;
 color:white;
+padding:30px;
 text-align:center;
-padding:20px;
 margin-top:40px;
-}
-
-/* Animations */
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:30px;
-}
-
-nav{
-display:none;
-}
-
 }
 
 </style>
@@ -160,10 +146,14 @@ display:none;
 
 <body>
 
+<div class="topbar">
+Government Polytechnic Atmakur – Student Portal
+</div>
+
 <header>
 
-<div class="logo-area">
-<img src="https://lh3.googleusercontent.com/a/ACg8ocL6oXKd7VWVA3md2ITcVMkULPq1dgoHU4jD_hH7vXseLuuk9-E=s288-c-no">
+<div class="logo">
+<img src="logo.png">
 <h2>GP Atmakur</h2>
 </div>
 
@@ -182,45 +172,45 @@ display:none;
 
 <h1>Government Polytechnic Atmakur</h1>
 
-<p>Student Portal for Notes, Question Papers, Attendance and Hostel Information</p>
+<p>Providing Quality Technical Education</p>
 
 </div>
 
 </section>
 
-<section class="portal">
+<section class="features">
 
 <div class="card" onclick="location.href='questionpapers.html'">
-
 <h3>📚 Question Papers</h3>
-
-<p>Access previous year question papers for all departments.</p>
-
+<p>Download previous exam papers.</p>
 </div>
 
 <div class="card" onclick="location.href='attendance.html'">
-
-<h3>📊 Attendance</h3>
-
-<p>Students can easily check their attendance details.</p>
-
+<h3>📊 Attendance Portal</h3>
+<p>Students can check attendance.</p>
 </div>
 
 <div class="card" onclick="location.href='hostel.html'">
-
 <h3>🏨 Hostel Information</h3>
-
-<p>View hostel rules, facilities and mess timings.</p>
-
+<p>Rules, facilities and mess details.</p>
 </div>
 
 <div class="card">
-
 <h3>📢 Notices</h3>
-
-<p>Stay updated with latest announcements.</p>
-
+<p>Latest college announcements.</p>
 </div>
+
+</section>
+
+<section class="notice">
+
+<h2>Latest Notices</h2>
+
+<ul>
+<li>Diploma Semester Exams Notification</li>
+<li>College Reopening Date Announcement</li>
+<li>Hostel Admission Registration</li>
+</ul>
 
 </section>
 
