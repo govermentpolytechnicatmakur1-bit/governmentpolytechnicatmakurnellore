@@ -48,23 +48,18 @@ height:45px;
 
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
   
-nav{
-display:flex;
-gap:20px;
-}
+<nav id="menu">
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
+<div class="close-btn" onclick="toggleMenu()">✕</div>
 
-.menu-btn{
-display:none;
-font-size:25px;
-cursor:pointer;
-}
+<a href="index.html">Home</a>
+<a href="questionpapers.html">Question Papers</a>
+<a href="attendance.html">Attendance</a>
+<a href="hostel.html">Hostel</a>
+<a href="#">Departments</a>
+<a href="#">Contact</a>
 
+</nav>
 /* HERO */
 
 .hero{
@@ -210,25 +205,30 @@ margin-top:40px;
 
 @media(max-width:768px){
 
+@media(max-width:768px){
+
 nav{
 position:fixed;
 top:0;
-right:-250px;
+right:-260px;
 height:100vh;
-width:250px;
+width:260px;
 background:#002147;
+display:flex;
 flex-direction:column;
-padding-top:80px;
-gap:20px;
 align-items:flex-start;
-padding-left:30px;
+justify-content:flex-start;
+padding-top:80px;
+padding-left:25px;
+gap:18px;
 transition:0.3s;
 z-index:999;
 }
 
 nav a{
-font-size:18px;
+display:block;
 width:100%;
+font-size:18px;
 padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,0.2);
 }
@@ -237,16 +237,17 @@ nav.active{
 right:0;
 }
 
-nav a{
-font-size:18px;
-}
-
-nav.active{
-right:0;
-}
-
 .menu-btn{
 display:block;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+color:white;
 }
 
 }
