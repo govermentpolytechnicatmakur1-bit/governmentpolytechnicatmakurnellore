@@ -1,58 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Hostel Information - Government Polytechnic Atmakur</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Hostel | Government Polytechnic Atmakur</title>
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
+/* GLOBAL */
+
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
+body{
+background:#f4f7fb;
+}
+
+/* HEADER */
+
 header{
-background:#003366;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+background:#002147;
 color:white;
-padding:20px;
-text-align:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:45px;
 }
 
 nav{
-background:#0055a5;
-padding:10px;
-text-align:center;
+display:flex;
+gap:20px;
 }
 
 nav a{
 color:white;
-margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
 
-section{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:8px;
-box-shadow:0px 0px 5px gray;
+.menu-btn{
+display:none;
+font-size:25px;
+cursor:pointer;
 }
 
-h2{
-color:#003366;
-}
+/* HERO */
 
-ul{
-line-height:1.8;
-}
-
-footer{
-background:#003366;
+.hero{
+height:45vh;
+background:url("https://images.unsplash.com/photo-1555854877-bab0e564b8d5") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
 text-align:center;
-padding:10px;
-margin-top:20px;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero h1{
+position:relative;
+z-index:2;
+font-size:40px;
+}
+
+/* SECTION */
+
+section{
+padding:60px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+color:#002147;
+}
+
+/* FACILITIES */
+
+.facilities{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.facility{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.facility h3{
+margin-top:10px;
+}
+
+/* RULES */
+
+.rules{
+max-width:800px;
+margin:auto;
+}
+
+.rules ul{
+line-height:2;
+}
+
+/* WARDEN */
+
+.warden{
+display:flex;
+gap:30px;
+align-items:center;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.warden img{
+width:200px;
+border-radius:10px;
+}
+
+.warden-info{
+max-width:400px;
+}
+
+/* FORM */
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#002147;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#001530;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+background:#002147;
+color:white;
+text-align:center;
+padding:40px 8%;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+display:none;
+flex-direction:column;
+background:#002147;
+position:absolute;
+top:70px;
+right:0;
+width:200px;
+padding:20px;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:28px;
+}
+
 }
 
 </style>
@@ -62,78 +238,157 @@ margin-top:20px;
 <body>
 
 <header>
-<h1>Government Polytechnic Atmakur</h1>
-<p>Hostel Information</p>
-</header>
 
-<nav>
+<div class="logo">
+<img src="https://drive.google.com/thumbnail?id=1XpsQdnkgN60zUSlCZ5bRyR4ZQXGZup5Y&sz=w2000">
+<h3>GP Atmakur</h3>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
 <a href="index.html">Home</a>
 <a href="questionpapers.html">Question Papers</a>
 <a href="attendance.html">Attendance</a>
 <a href="hostel.html">Hostel</a>
 </nav>
 
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+<h1>College Hostel</h1>
+</section>
+
+<!-- FACILITIES -->
+
 <section>
 
-<h2>Hostel Overview</h2>
+<h2 class="section-title">Hostel Facilities</h2>
 
-<p>
-The hostel facility at Government Polytechnic Atmakur provides accommodation
-for students from different regions. The hostel ensures a safe, disciplined,
-and comfortable environment for students to focus on their studies.
-</p>
+<div class="facilities">
+
+<div class="facility">
+<h3>🛏 Comfortable Rooms</h3>
+<p>Clean and spacious rooms for students.</p>
+</div>
+
+<div class="facility">
+<h3>🍛 Mess Facility</h3>
+<p>Healthy and hygienic food provided daily.</p>
+</div>
+
+<div class="facility">
+<h3>📶 WiFi</h3>
+<p>Internet facility for study and research.</p>
+</div>
+
+<div class="facility">
+<h3>⚡ 24/7 Electricity</h3>
+<p>Continuous power supply.</p>
+</div>
+
+<div class="facility">
+<h3>🚿 Clean Bathrooms</h3>
+<p>Regularly maintained bathrooms.</p>
+</div>
+
+<div class="facility">
+<h3>🛡 Security</h3>
+<p>Safe environment with supervision.</p>
+</div>
+
+</div>
 
 </section>
 
+<!-- RULES -->
+
 <section>
 
-<h2>Hostel Facilities</h2>
+<h2 class="section-title">Hostel Rules</h2>
+
+<div class="rules">
 
 <ul>
-<li>Spacious student rooms</li>
-<li>24/7 water facility</li>
-<li>Mess facility for food</li>
-<li>Security and supervision</li>
-<li>Clean drinking water</li>
+
+<li>Students must maintain discipline inside hostel.</li>
+<li>Entry after 9:30 PM is not allowed.</li>
+<li>Rooms must be kept clean.</li>
+<li>Visitors are not allowed inside rooms.</li>
+<li>Damage to hostel property will be fined.</li>
+<li>Silence must be maintained during study hours.</li>
+
 </ul>
+
+</div>
 
 </section>
 
+<!-- WARDEN -->
+
 <section>
 
-<h2>Hostel Rules</h2>
+<h2 class="section-title">Hostel Warden</h2>
 
-<ul>
-<li>Students must maintain discipline inside the hostel.</li>
-<li>Hostel timing must be strictly followed.</li>
-<li>Ragging is strictly prohibited.</li>
-<li>Students must keep their rooms clean.</li>
-<li>Visitors are allowed only during permitted hours.</li>
-</ul>
+<div class="warden">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<div class="warden-info">
+
+<h3>Mr. A.Rajendra </h3>
+
+<p>Hostel Warden</p>
+
+<p>📞 Phone: +91 88010 89870</p>
+
+<p>📧 Email:govermentpolytechnicatmakur1@gmail.com</p>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- COMPLAINT FORM -->
+
 <section>
 
-<h2>Mess Timings</h2>
+<h2 class="section-title">Hostel Complaint / Request</h2>
 
-<ul>
-<li>Breakfast: 8:30 AM – 9:30 AM</li>
-<li>Lunch: 01:20 PM – 2:00 PM</li>
-<li>Dinner: 8:00 PM – 9:30 PM</li>
-</ul>
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="text" placeholder="Room Number" required>
+
+<input type="text" placeholder="Phone Number" required>
+
+<textarea rows="5" placeholder="Write your complaint or request"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
 
 </section>
 
+<!-- GALLERY -->
+
 <section>
 
-<h2>Hostel Warden Contact</h2>
+<h2 class="section-title">Hostel Gallery</h2>
 
-<p>
-Warden: Hostel In-Charge<br>
-Phone: +91 <br>
-Office: Government Polytechnic Atmakur Hostel Office
-</p>
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1560448075-bb4caa6b8c24">
+
+<img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69">
+
+<img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf">
+
+</div>
 
 </section>
 
@@ -142,6 +397,14 @@ Office: Government Polytechnic Atmakur Hostel Office
 <p>© 2026 Government Polytechnic Atmakur</p>
 
 </footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
