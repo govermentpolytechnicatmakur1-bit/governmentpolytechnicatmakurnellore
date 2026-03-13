@@ -85,12 +85,12 @@ left:0;
 width:300%;
 height:100%;
 display:flex;
-animation:slideLeft 30s infinite;
+animation:slideLeft 36s ease-in-out infinite;
 }
 
 .slider img{
-width:100%;
-height:100%;
+width:100vw;
+height:85vh;
 object-fit:cover;
 flex-shrink:0;
 }
@@ -118,7 +118,7 @@ z-index:2;
 font-size:45px;
 }
 
-/* SLOW SLIDER WITH PAUSE */
+/* SLIDER ANIMATION */
 
 @keyframes slideLeft{
 
@@ -126,23 +126,23 @@ font-size:45px;
 transform:translateX(0);
 }
 
-20%{
+25%{
 transform:translateX(0);
 }
 
-33%{
+35%{
 transform:translateX(-100%);
 }
 
-53%{
+60%{
 transform:translateX(-100%);
 }
 
-66%{
+70%{
 transform:translateX(-200%);
 }
 
-86%{
+95%{
 transform:translateX(-200%);
 }
 
@@ -317,9 +317,7 @@ font-size:30px;
 <div class="notice-bar">
 
 <marquee>
-
 Semester Examination Notification | Hostel Admission Open | College Reopening Soon
-
 </marquee>
 
 </div>
@@ -434,5 +432,4 @@ document.getElementById("menu").classList.toggle("active");
 </script>
 
 </body>
-
 </html>
