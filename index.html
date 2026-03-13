@@ -66,14 +66,14 @@ cursor:pointer;
 /* HERO SECTION */
 
 .hero{
-height:85vh;
-position:relative;
-overflow:hidden;
+height:70vh;
+background:url("https://drive.google.com/thumbnail?id=1NccmXEnCtZ9RWx8AcUL-6VL-9QDOipiY&sz=w2000") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
+position:relative;
 }
 
 /* IMAGE SLIDER */
@@ -284,7 +284,19 @@ font-size:30px;
 }
 
 }
+@media(max-width:768px){
 
+.hero{
+height:45vh;
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:22px;
+}
+
+}
 </style>
 
 </head>
