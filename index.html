@@ -65,22 +65,16 @@ cursor:pointer;
 
 /* HERO SECTION */
 
-<section class="hero">
-
-<div class="slider">
-
-<img class="slide" src="https://drive.google.com/thumbnail?id=1NccmXEnCtZ9RWx8AcUL-6VL-9QDOipiY&sz=w2000">
-<img class="slide" src="https://drive.google.com/thumbnail?id=1LpIf6xhKmLPMysT_Ta8yM11pAKTHtukX&sz=w2000">
-<img class="slide" src="https://drive.google.com/thumbnail?id=1-S0BwQfC0uvGW9pa08_oO1G71-cNYhuH&sz=w2000">
-
-</div>
-
-<div class="hero-text">
-<h1>Government Polytechnic Atmakur</h1>
-<p>Empowering Students With Technical Education</p>
-</div>
-
-</section>
+.hero{
+height:85vh;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
 
 /* IMAGE SLIDER */
 
@@ -95,8 +89,8 @@ animation:slideLeft 30s infinite;
 }
 
 .slider img{
-width:100vw;
-height:85vh;
+width:100%;
+height:100%;
 object-fit:cover;
 flex-shrink:0;
 }
@@ -126,55 +120,34 @@ font-size:45px;
 
 /* SLOW SLIDER WITH PAUSE */
 
-.slider{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-animation:sliderAnimation 30s infinite;
-}
-
-.slide:nth-child(1){
-animation-delay:0s;
-}
-
-.slide:nth-child(2){
-animation-delay:10s;
-}
-
-.slide:nth-child(3){
-animation-delay:20s;
-}
-
-@keyframes sliderAnimation{
+@keyframes slideLeft{
 
 0%{
-opacity:0;
+transform:translateX(0);
 }
 
-10%{
-opacity:1;
+20%{
+transform:translateX(0);
 }
 
-30%{
-opacity:1;
+33%{
+transform:translateX(-100%);
 }
 
-40%{
-opacity:0;
+53%{
+transform:translateX(-100%);
+}
+
+66%{
+transform:translateX(-200%);
+}
+
+86%{
+transform:translateX(-200%);
 }
 
 100%{
-opacity:0;
+transform:translateX(0);
 }
 
 }
@@ -322,7 +295,7 @@ font-size:30px;
 <div class="logo">
 
 <img src="https://drive.google.com/thumbnail?id=1XpsQdnkgN60zUSlCZ5bRyR4ZQXGZup5Y&sz=w2000">
-<h3>GPT Atmakur</h3>
+<h3>GP Atmakur</h3>
 
 </div>
 
