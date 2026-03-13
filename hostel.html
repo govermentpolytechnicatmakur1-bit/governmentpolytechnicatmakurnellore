@@ -219,10 +219,22 @@ width:250px;
 background:#002147;
 flex-direction:column;
 padding-top:80px;
-gap:25px;
-align-items:center;
+gap:20px;
+align-items:flex-start;
+padding-left:30px;
 transition:0.3s;
-  z-index:999;
+z-index:999;
+}
+
+nav a{
+font-size:18px;
+width:100%;
+padding:10px 0;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+nav.active{
+right:0;
 }
 
 nav a{
