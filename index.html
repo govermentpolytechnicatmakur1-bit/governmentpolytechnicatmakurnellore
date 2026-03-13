@@ -85,13 +85,14 @@ left:0;
 width:300%;
 height:100%;
 display:flex;
-animation:slideLeft 18s infinite;
+animation:slideLeft 30s infinite;
 }
 
 .slider img{
 width:100%;
 height:100%;
 object-fit:cover;
+flex-shrink:0;
 }
 
 /* DARK OVERLAY */
@@ -117,15 +118,23 @@ z-index:2;
 font-size:45px;
 }
 
-/* SLIDE RIGHT TO LEFT */
+/* SLOW SLIDER WITH PAUSE */
 
 @keyframes slideLeft{
 
 0%{
-transform:translateX(0%);
+transform:translateX(0);
+}
+
+20%{
+transform:translateX(0);
 }
 
 33%{
+transform:translateX(-100%);
+}
+
+53%{
 transform:translateX(-100%);
 }
 
@@ -133,8 +142,12 @@ transform:translateX(-100%);
 transform:translateX(-200%);
 }
 
+86%{
+transform:translateX(-200%);
+}
+
 100%{
-transform:translateX(0%);
+transform:translateX(0);
 }
 
 }
@@ -282,7 +295,7 @@ font-size:30px;
 <div class="logo">
 
 <img src="https://drive.google.com/thumbnail?id=1XpsQdnkgN60zUSlCZ5bRyR4ZQXGZup5Y&sz=w2000">
-<h3>GP Atmakur</h3>
+<h3>GPT Atmakur</h3>
 
 </div>
 
@@ -402,7 +415,6 @@ Semester Examination Notification | Hostel Admission Open | College Reopening So
 <img src="https://drive.google.com/thumbnail?id=1LpIf6xhKmLPMysT_Ta8yM11pAKTHtukX&sz=w1000">
 <img src="https://drive.google.com/thumbnail?id=1-S0BwQfC0uvGW9pa08_oO1G71-cNYhuH&sz=w1000">
 
-  
 </div>
 
 </section>
