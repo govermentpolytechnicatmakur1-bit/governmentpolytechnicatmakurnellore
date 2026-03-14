@@ -11,7 +11,7 @@
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family:Arial;
 margin:0;
 background:#f5f7fa;
 }
@@ -25,14 +25,9 @@ text-align:center;
 padding:25px;
 }
 
-header h1{
-margin:0;
-font-size:28px;
-}
-
 .title{
 text-align:center;
-margin:30px 0;
+margin:30px;
 color:#002147;
 }
 
@@ -44,9 +39,9 @@ max-width:1000px;
 margin:auto;
 }
 
-/* DROPDOWN */
+/* BRANCH DROPDOWN */
 
-.dropdown{
+.branch{
 background:white;
 margin-bottom:15px;
 border-radius:6px;
@@ -54,7 +49,7 @@ box-shadow:0 2px 8px rgba(0,0,0,0.1);
 overflow:hidden;
 }
 
-.dropdown-btn{
+.branch-btn{
 width:100%;
 background:#003366;
 color:white;
@@ -65,13 +60,25 @@ cursor:pointer;
 text-align:left;
 }
 
-.dropdown-btn:hover{
-background:#0055a5;
+.semester{
+background:#e9eef5;
+margin:10px;
+border-radius:5px;
 }
 
-.dropdown-content{
+.sem-btn{
+width:100%;
+background:#4a6fa5;
+color:white;
+padding:12px;
+border:none;
+cursor:pointer;
+text-align:left;
+}
+
+.sem-content{
 display:none;
-padding:20px;
+padding:15px;
 }
 
 /* PAPER */
@@ -80,43 +87,16 @@ padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:15px;
+margin-bottom:10px;
 flex-wrap:wrap;
 }
-
-.paper-title{
-font-size:16px;
-color:#333;
-}
-
-/* BUTTON */
 
 .btn{
 background:#007bff;
 color:white;
-padding:8px 14px;
+padding:6px 12px;
 text-decoration:none;
-border-radius:5px;
-font-size:14px;
-}
-
-.btn:hover{
-background:#0056b3;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-.paper{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.btn{
-margin-top:8px;
-}
-
+border-radius:4px;
 }
 
 footer{
@@ -134,8 +114,10 @@ margin-top:40px;
 <body>
 
 <header>
+
 <h1>Government Polytechnic Atmakur</h1>
-<p>Nellore District, Andhra Pradesh</p>
+<p>Nellore District</p>
+
 </header>
 
 <h2 class="title">Previous Question Papers</h2>
@@ -144,82 +126,102 @@ margin-top:40px;
 
 <!-- CSE -->
 
-<div class="dropdown">
+<div class="branch">
 
-<button class="dropdown-btn">Computer Engineering (CSE)</button>
+<button class="branch-btn">Computer Engineering (CSE)</button>
 
-<div class="dropdown-content">
+<div class="branch-content">
+
+<!-- 1st SEM -->
+
+<div class="semester">
+
+<button class="sem-btn">1st Semester</button>
+
+<div class="sem-content">
 
 <div class="paper">
-<div class="paper-title">Programming in C - 2023</div>
+<span>Engineering Mathematics</span>
 <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
 </div>
 
 <div class="paper">
-<div class="paper-title">Computer Fundamentals - 2023</div>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
-</div>
-
-</div>
-</div>
-
-<!-- EEE -->
-
-<div class="dropdown">
-
-<button class="dropdown-btn">Electrical & Electronics Engineering (EEE)</button>
-
-<div class="dropdown-content">
-
-<div class="paper">
-<div class="paper-title">Basic Electrical Engineering - 2023</div>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
-</div>
-
-<div class="paper">
-<div class="paper-title">Electrical Machines - 2023</div>
+<span>Engineering Physics</span>
 <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
 </div>
 
 </div>
 </div>
 
-<!-- CIVIL -->
+<!-- 3rd SEM -->
 
-<div class="dropdown">
+<div class="semester">
 
-<button class="dropdown-btn">Civil Engineering</button>
+<button class="sem-btn">3rd Semester</button>
 
-<div class="dropdown-content">
-
-<div class="paper">
-<div class="paper-title">Engineering Mechanics - 2023</div>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
-</div>
+<div class="sem-content">
 
 <div class="paper">
-<div class="paper-title">Surveying - 2023</div>
+<span>Programming in C</span>
 <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
 </div>
 
 </div>
+</div>
+
+<!-- 4th SEM -->
+
+<div class="semester">
+
+<button class="sem-btn">4th Semester</button>
+
+<div class="sem-content">
+
+<div class="paper">
+<span>Data Structures</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<!-- 5th SEM -->
+
+<div class="semester">
+
+<button class="sem-btn">5th Semester</button>
+
+<div class="sem-content">
+
+<div class="paper">
+<span>Computer Networks</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 <footer>
+
 © 2026 Government Polytechnic Atmakur
+
 </footer>
 
 <script>
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
+/* SEMESTER DROPDOWN */
 
-for (var i = 0; i < dropdown.length; i++) {
+var sem = document.getElementsByClassName("sem-btn");
 
-dropdown[i].addEventListener("click", function() {
+for (var i = 0; i < sem.length; i++) {
 
-this.classList.toggle("active");
+sem[i].addEventListener("click", function() {
 
 var content = this.nextElementSibling;
 
@@ -230,9 +232,11 @@ content.style.display = "block";
 }
 
 });
+
 }
 
 </script>
 
 </body>
+
 </html>
