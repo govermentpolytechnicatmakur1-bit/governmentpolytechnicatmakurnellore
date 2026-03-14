@@ -13,10 +13,8 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f5f7fa;
+background:#f4f6f9;
 }
-
-/* HEADER */
 
 header{
 background:#002147;
@@ -31,15 +29,13 @@ margin:30px;
 color:#002147;
 }
 
-/* CONTAINER */
-
 .container{
 width:90%;
 max-width:1000px;
 margin:auto;
 }
 
-/* BRANCH DROPDOWN */
+/* BRANCH */
 
 .branch{
 background:white;
@@ -56,12 +52,13 @@ color:white;
 padding:15px;
 font-size:18px;
 border:none;
-cursor:pointer;
 text-align:left;
 }
 
+/* SEMESTER */
+
 .semester{
-background:#e9eef5;
+background:#eef2f7;
 margin:10px;
 border-radius:5px;
 }
@@ -86,7 +83,6 @@ padding:15px;
 .paper{
 display:flex;
 justify-content:space-between;
-align-items:center;
 margin-bottom:10px;
 flex-wrap:wrap;
 }
@@ -130,14 +126,8 @@ margin-top:40px;
 
 <button class="branch-btn">Computer Engineering (CSE)</button>
 
-<div class="branch-content">
-
-<!-- 1st SEM -->
-
 <div class="semester">
-
 <button class="sem-btn">1st Semester</button>
-
 <div class="sem-content">
 
 <div class="paper">
@@ -153,12 +143,8 @@ margin-top:40px;
 </div>
 </div>
 
-<!-- 3rd SEM -->
-
 <div class="semester">
-
 <button class="sem-btn">3rd Semester</button>
-
 <div class="sem-content">
 
 <div class="paper">
@@ -169,38 +155,140 @@ margin-top:40px;
 </div>
 </div>
 
-<!-- 4th SEM -->
-
 <div class="semester">
-
 <button class="sem-btn">4th Semester</button>
-
 <div class="sem-content">
 
 <div class="paper">
 <span>Data Structures</span>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
 </div>
 
 </div>
 </div>
-
-<!-- 5th SEM -->
 
 <div class="semester">
-
 <button class="sem-btn">5th Semester</button>
-
 <div class="sem-content">
 
 <div class="paper">
 <span>Computer Networks</span>
-<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="btn">Download</a>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
 </div>
 
 </div>
 </div>
 
+</div>
+
+<!-- EEE -->
+
+<div class="branch">
+
+<button class="branch-btn">Electrical & Electronics Engineering (EEE)</button>
+
+<div class="semester">
+<button class="sem-btn">1st Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Engineering Mathematics</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">3rd Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Basic Electrical Engineering</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">4th Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Electrical Machines</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">5th Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Power Systems</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- CIVIL -->
+
+<div class="branch">
+
+<button class="branch-btn">Civil Engineering</button>
+
+<div class="semester">
+<button class="sem-btn">1st Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Engineering Mathematics</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">3rd Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Engineering Mechanics</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">4th Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Surveying</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
+</div>
+
+<div class="semester">
+<button class="sem-btn">5th Semester</button>
+<div class="sem-content">
+
+<div class="paper">
+<span>Structural Engineering</span>
+<a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" class="btn">Download</a>
+</div>
+
+</div>
 </div>
 
 </div>
@@ -215,19 +303,17 @@ margin-top:40px;
 
 <script>
 
-/* SEMESTER DROPDOWN */
-
 var sem = document.getElementsByClassName("sem-btn");
 
 for (var i = 0; i < sem.length; i++) {
 
-sem[i].addEventListener("click", function() {
+sem[i].addEventListener("click", function(){
 
 var content = this.nextElementSibling;
 
-if (content.style.display === "block") {
+if(content.style.display === "block"){
 content.style.display = "none";
-} else {
+}else{
 content.style.display = "block";
 }
 
@@ -238,5 +324,4 @@ content.style.display = "block";
 </script>
 
 </body>
-
 </html>
