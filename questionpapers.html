@@ -168,13 +168,25 @@ margin-top:40px;
 </div>
 </div>
 
-<div class="sem-content">
 <div class="paper">
-<span>Engineering ECD</span>
-<a href="https://drive.google.com/uc?export=download&id=1HP6wUYCvyw5IVF1-f8tmRh-4qgpMK2Qd" class="btn">Download</a>
+<span>ECD</span>
+
+<select onchange="openPaper(this.value)">
+<option value="">Select Paper</option>
+<option value="https://drive.google.com/uc?export=download&id=1vAyWLucdWBcQX7rqOZscYtt9OrsZYRal"> 1</option>
+<option value="https://drive.google.com/uc?export=download&id=1e48epxLmhirPV0nWj9avoOt46iwY_LCO"> 2</option>
+<option value="https://drive.google.com/uc?export=download&id=1fC0kA2L59iq4oCd8o9bRUOYGOLyTxJt5">3</option>
+</select>
+
 </div>
-</div>
-</div>
+
+<script>
+function openPaper(link){
+if(link){
+window.open(link, "_blank");
+}
+}
+</script>
   
 <div class="semester">
 <button class="sem-btn">3rd Semester</button>
